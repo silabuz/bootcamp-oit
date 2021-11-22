@@ -1,0 +1,151 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms lesson</title>
+  </head>
+  <body>
+    <!-- Demostracion de creacion de formulario (Guiado) 
+        Nota: labels son usados para indicarle al usuario que datos se requieren ingresar 
+        en el input.
+    -->
+    <h4>Primero formulario</h4>
+    <form>
+      <label>Nombre:</label><br />
+      <input type="text" id="fname" name="fname" /><br />
+      <label>Apellido:</label><br />
+      <input type="text" id="lname" name="lname" />
+    </form>
+
+    <br />
+
+    <!-- Demostracion de creacion de formulario (Guiado) 
+        Incluye boton de envio y botones "radio"
+
+        Explicacion de atributos: 
+          id = identificador unico para un elemento
+          type = tipo del elemento input
+          name = nombre para identificar el elemento
+          value = Valor del elemento al ser seleccionado (mayor uso en los radio y checkbox )
+
+        Consideraciones: Cuando varios botones tipo radio comparten el mismo nombre,
+        estos no pueden ser seleccionados a la vez. 
+        Util cuando se quiere permitir la seleccion de una sola opcion
+    -->
+    <h4>Segundo formulario</h4>
+    <h5>
+      Selecciona un lenguaje y escribe en la caja de texto porque te gusta
+    </h5>
+
+    <form>
+      <input type="radio" id="html" name="fav_language" value="HTML" />
+      <label>HTML</label><br />
+      <input type="radio" id="css" name="fav_language" value="CSS" />
+      <label>CSS</label><br />
+      <input
+        type="radio"
+        id="javascript"
+        name="fav_language"
+        value="JavaScript"
+      />
+      <label>JavaScript</label><br />
+      <input type="text" /><br />
+      <input type="submit" />
+    </form>
+    <br />
+
+    <!-- DESAFIO 1 (no guiado). Crear formulario donde se permita ingresar un nombre  -->
+    <h4>DESAFIO 1</h4>
+    <form action="/action_page.php">
+      <label> Nombre:</label><br />
+      <input type="text" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <br />
+
+    <!-- DESAFIO 2 (no guiado). Crear formulario de login, debe contener email, username y password.
+
+      Nota: para el ejercicio basta que el campo password sea tipo texto, sin embargo
+      existe el input-type "password". Explicar al fin del ejercicio.
+    -->
+    <h4>DESAFIO 2</h4>
+
+    <form action="/action_page.php">
+      <label> username:</label>
+      <input type="text" /><br /><br />
+      <label> email:</label>
+      <input type="text" /><br /><br />
+      <label> password:</label>
+      <input type="text" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <br />
+
+    <!-- DESAFIO 3 (no guiado). Crear formulario de registro de estudiantes 
+      para una escuela secundaria, se deben capturar los datos:
+        Nombre, apellido, edad, curso, nombre del padre, nombre de la madre.
+    -->
+    <h4>DESAFIO 3</h4>
+    <form action="/action_page.php">
+      <label> Nombre:</label>
+      <input type="text" /><br /><br />
+      <label> apellido:</label>
+      <input type="text" /><br /><br />
+      <label> edad:</label>
+      <input type="text" /><br /><br />
+      <label> nombre del padre:</label>
+      <input type="text" /><br /><br />
+      <label> nombre de la madre:</label>
+      <input type="text" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <br />
+
+    <!-- DESAFIO 4 (no guiado). Crear un formulario en el que se haga uso de 
+        checkbox para selecionar una o multiples actividades
+    -->
+    <h4>DESAFIO 4</h4>
+    <form>
+      <input type="checkbox" value="Bike" />
+      <label> Nadar</label><br />
+      <input type="checkbox" value="Car" />
+      <label> correr</label><br />
+      <input type="checkbox" value="Boat" />
+      <label> Entrenar</label><br />
+      <input type="checkbox" value="Boat" />
+      <label> Estudiar</label><br />
+      <input type="checkbox" value="Boat" />
+      <label> Codear</label>
+    </form>
+    <br />
+
+    <!-- DESAFIO 5 (no guiado). Crear un formulario de registro en el que:
+        1- se permita ingresar un correo electronico y nombre de usuario
+        2- Se permita selecionar una profesion de una lista de ellas ( Radio )
+        3- se debe permitir marcar o no, con un check una opcion de 
+        "Quiero Recibir Notifiaciones" ( CheckBox )
+        4- incluir boton de envio de formulario
+    -->
+    <h4>DESAFIO 5</h4>
+    <form>
+      <label> username:</label>
+      <input type="text" /><br /><br />
+      <label> email:</label>
+      <input type="text" /><br /><br />
+
+      <input type="radio" id="html" name="fav_language" value="Ingeniero" />
+      <label>Ingeniero</label><br />
+      <input type="radio" id="css" name="fav_language" value="Programador" />
+      <label>Programador</label><br />
+      <input type="radio" name="fav_language" value="Professor" />
+      <label>Professor</label><br /><br />
+
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
+      <label> Quiero recibir notificaciones</label>
+
+      <input type="submit" value="Submit" />
+    </form>
+    <br />
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables lesson</title>
+  </head>
+
+  <body>
+    <!-- EJEMPLO de creacion de una tabla (Guiado) -->
+
+    <h3>Mi primera tabla en html</h1>
+    <!-- Inicio de tabla -->
+    <table>
+      <!-- Cabecera -->
+      <tr>
+        <th>Título columna 1</th>
+        <!-- Celda de cabecera de la columna 1 -->
+        <th>Título columna 2</th>
+        <!-- Celda de cabecera de la columna 2 -->
+        <th>Título columna 3</th>
+        <!-- Celda de cabecera de la columna 3 -->
+      </tr>
+      <!-- Primera fila -->
+      <tr>
+        <td>Celda 1x1</td>
+        <!-- Primera celda de la primera fila -->
+        <td>Celda 2x1</td>
+        <!-- Segunda celda de la primera fila -->
+        <td>Celda 3x1</td>
+        <!-- Tercera celda de la primera fila -->
+      </tr>
+      <!-- Segunda fila -->
+      <tr>
+        <td>Celda 1x2</td>
+        <!-- Primera celda de la segunda fila -->
+        <td>Celda 2x2</td>
+        <!-- Segunda celda de la segunda fila -->
+        <td>Celda 3x2</td>
+        <!-- Tercera celda de la segunda fila -->
+      </tr>
+    </table>
+    <br>
+
+    <!-- DESAFIO 1 (No guiado) -->
+    <!-- Solicitar el desarrollo de una tabla de dimensiones 2 x 5-->
+
+    <table>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+      </tr>
+      <tr>
+        <td>Jorge</td>
+        <td>Gonzales</td>
+      </tr>
+      <tr>
+        <td>Jose</td>
+        <td>Rojas</td>
+      </tr>
+      <tr>
+        <td>Alexander</td>
+        <td>Hernandez</td>
+      </tr>
+      <tr>
+        <td>Maria</td>
+        <td>Vargas</td>
+      </tr>
+    </table>
+
+    <!-- Fin de tabla-->
+
+    <br>
+    <!-- DESAFIO 2 (No guiado) -->
+    <!-- Solicitar el desarrollo de una tabla estructurada
+        por cabecera, cuerpo y pie (explicadas en el slide). 
+        Etiquetas de estructura: <thead>, <tbody>, <tfoot>.
+     -->
+
+     <table>
+         <!-- HEADER -->
+        <thead>
+          <tr>
+            <th>Car</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <!-- END OF HEADER -->
+
+        <!-- BODY -->
+        <tbody>
+          <tr>
+            <td>Mustang</td>
+            <td>$100000</td>
+          </tr>
+          <tr>
+            <td>Hummer</td>
+            <td>$80000</td>
+          </tr>
+        </tbody>
+        <!-- END OF BODY -->
+
+        <!-- FOOTER -->
+        <tfoot>
+          <tr>
+            <td>Sum</td>
+            <td>$180000</td>
+          </tr>
+        </tfoot>
+        <!-- END OF FOOTER -->
+      </table>
+
+    <!-- Fin de tabla-->
+  </body>
+
+</html>
