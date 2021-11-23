@@ -57,7 +57,7 @@
 
     <!-- DESAFIO 1 (no guiado). Crear formulario donde se permita ingresar un nombre  -->
     <h4>DESAFIO 1</h4>
-    <form action="/action_page.php">
+    <form>
       <label> Nombre:</label><br />
       <input type="text" /><br /><br />
       <input type="submit" value="Submit" />
@@ -65,84 +65,124 @@
     <br />
 
     <!-- DESAFIO 2 (no guiado). Crear formulario de login, debe contener email, username y password.
+      Se debe validar que el nombre de usuario no exceda los 10 caracteres.
+      Se debe validar que el password contenga no menos de 6 caracteres y no mas de 15.
 
       Nota: para el ejercicio basta que el campo password sea tipo texto, sin embargo
       existe el input-type "password". Explicar al fin del ejercicio.
     -->
     <h4>DESAFIO 2</h4>
-
-    <form action="/action_page.php">
+    <form>
       <label> username:</label>
-      <input type="text" /><br /><br />
+      <input type="text" maxlength="10" /><br /><br />
       <label> email:</label>
       <input type="text" /><br /><br />
       <label> password:</label>
-      <input type="text" /><br /><br />
+      <input type="text" minlength="6" maxlength="15" /><br /><br />
       <input type="submit" value="Submit" />
     </form>
     <br />
 
     <!-- DESAFIO 3 (no guiado). Crear formulario de registro de estudiantes 
       para una escuela secundaria, se deben capturar los datos:
-        Nombre, apellido, edad, curso, nombre del padre, nombre de la madre.
+        Nombre, apellido, edad, curso, nombre del padre, nombre de la madre. 
+        considedar el campo input de edad de tipo numero type="number"
+        
+        validar que tanto nombre como apellidos no excedan los 50 caracteres y no sean menores a 5.
+        validar que tanto nombre de padre y madre no excedan los 50 caracteres y no sean menores a 5.
+        validar que la edad admisible sea solo desde entre 10 a 18 anhos de edad.
+
     -->
     <h4>DESAFIO 3</h4>
-    <form action="/action_page.php">
+    <form>
       <label> Nombre:</label>
-      <input type="text" /><br /><br />
+      <input type="text" minlength="5" maxlength="50" /><br /><br />
       <label> apellido:</label>
-      <input type="text" /><br /><br />
+      <input type="text" minlength="5" maxlength="50" /><br /><br />
       <label> edad:</label>
-      <input type="text" /><br /><br />
+      <input type="number" min="10" max="18" /><br /><br />
       <label> nombre del padre:</label>
-      <input type="text" /><br /><br />
+      <input type="text" minlength="5" maxlength="50" /><br /><br />
       <label> nombre de la madre:</label>
-      <input type="text" /><br /><br />
+      <input type="text" minlength="5" maxlength="50" /><br /><br />
       <input type="submit" value="Submit" />
     </form>
     <br />
 
     <!-- DESAFIO 4 (no guiado). Crear un formulario en el que se haga uso de 
-        checkbox para selecionar una o multiples actividades
+        checkbox para selecionar una o multiples actividades, min 5 checks.
+        se require que:
+          1. cada check debe tener su nombre identificador.
+          2. cada check debe tener un id unico
+          3. cada check debe tener un valor (relacionado a la accion)
+          4. El primer check debe estar marcado por defecto
+          5. el tercer input debe estar desabilitado
     -->
     <h4>DESAFIO 4</h4>
     <form>
-      <input type="checkbox" value="Bike" />
+      <input type="checkbox" name="nadar" value="nadar" checked />
       <label> Nadar</label><br />
-      <input type="checkbox" value="Car" />
+      <input type="checkbox" name="correr" value="correr" />
       <label> correr</label><br />
-      <input type="checkbox" value="Boat" />
+      <input type="checkbox" name="entrenar" value="entrenar" />
       <label> Entrenar</label><br />
-      <input type="checkbox" value="Boat" />
+      <input type="checkbox" name="estudiar" value="estudiar" disabled />
       <label> Estudiar</label><br />
-      <input type="checkbox" value="Boat" />
+      <input type="checkbox" name="codear" value="codear" />
       <label> Codear</label>
     </form>
     <br />
 
     <!-- DESAFIO 5 (no guiado). Crear un formulario de registro en el que:
-        1- se permita ingresar un correo electronico y nombre de usuario
-        2- Se permita selecionar una profesion de una lista de ellas ( Radio )
-        3- se debe permitir marcar o no, con un check una opcion de 
+        1- se permita ingresar un correo electronico. Este debe ser del tipo "email"
+        2- se permita ingresar un nombre de usuario con un minimo de 5 y maximo de 15 caracteres
+        3- se permita ingresar un password usando el campo de tipo "password" con maximo de 20 caracteres
+        4- Se permita selecionar una profesion de una lista de ellas ( Radio buttons )
+        5- se debe permitir marcar o no, con un check una opcion de 
         "Quiero Recibir Notifiaciones" ( CheckBox )
-        4- incluir boton de envio de formulario
+        6- incluir boton de envio de formulario
+        7- Cada text input debe tener un placeholder
+        8- anhadir un campo de fecha "date", para capturar la fecha de nacimiento del usuario
+            debe contemplar solo un rango desde 1950 hasta fecha actual
     -->
     <h4>DESAFIO 5</h4>
     <form>
       <label> username:</label>
-      <input type="text" /><br /><br />
+      <input
+        type="text"
+        minlength="5"
+        maxlength="15"
+        placeholder="Email"
+      /><br /><br />
       <label> email:</label>
-      <input type="text" /><br /><br />
+      <input type="email" placeholder="email" /><br /><br />
+      <label> password:</label>
+      <input
+        type="password"
+        placeholder="password"
+        maxlength="20"
+      /><br /><br />
 
-      <input type="radio" id="html" name="fav_language" value="Ingeniero" />
+      <input type="radio" id="html" name="profesion" value="Ingeniero" />
       <label>Ingeniero</label><br />
-      <input type="radio" id="css" name="fav_language" value="Programador" />
+      <input type="radio" id="css" name="profesion" value="Programador" />
       <label>Programador</label><br />
-      <input type="radio" name="fav_language" value="Professor" />
+      <input type="radio" name="profesion" value="Professor" />
       <label>Professor</label><br /><br />
 
-      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
-      <label> Quiero recibir notificaciones</label>
+      <label for="fecha-de-nacimiento">Fecha de nacimiento:</label>
+
+      <input
+        type="date"
+        id="date"
+        name="date"
+        min="1950-01-01"
+        max="2021-11-23"
+      />
+      <br />
+
+      <input type="checkbox" id="notify" name="notify" value="notify" />
+      <label> Quiero recibir notificaciones</label><br />
 
       <input type="submit" value="Submit" />
     </form>
