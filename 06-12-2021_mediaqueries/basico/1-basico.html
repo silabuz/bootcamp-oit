@@ -1,0 +1,69 @@
+<html lang="en">
+  <head>
+    <style>
+      .container {
+        display: flex;
+      }
+      .container > div {
+        padding: 5%;
+        margin: 1%;
+        background-color: blueviolet;
+        color: white;
+      }
+      /* Dispositivos extra pequenos (telefonos, 600px and down) */
+      @media (max-width: 600px) {
+        .container > div:nth-child(1) {
+          background-color: pink;
+        }
+      }
+
+      /* Dispositivos pequenos (tablets y teléfonos grandes, 600px and up) */
+      @media (min-width: 600px) {
+        .container > div:nth-child(1) {
+          background-color: orange;
+        }
+      }
+
+      /* Dispositivos medianos (tablets grandes, 768px and up) */
+      @media (min-width: 768px) {
+        .container > div:nth-child(1) {
+          background-color: blue;
+        }
+      }
+
+      /* Dispositivos grandes (laptops/desktops, 992px and up) */
+      @media (min-width: 992px) {
+        .container > div:nth-child(1) {
+          background-color: green;
+        }
+        .container > div:nth-child(2) {
+          background-color: blue;
+          order: 3;
+        }
+        .container > div:nth-child(1) {
+          display: none;
+        }
+      }
+      /* Dispositivos extra grandes(laptops y desktops grandes, 1200px and up) */
+      @media (min-width: 1200px) {
+        .container > div:nth-child(1) {
+          background-color: black;
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        Background pink on extra-small,orange on small, blue on medium, green on
+        large, black on extra-large
+      </div>
+      <div>Asume la tercera posicion en pantalla grande</div>
+      <div>disapiers on large</div>
+    </div>
+  </body>
+</html>
