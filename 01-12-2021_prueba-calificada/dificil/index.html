@@ -1,0 +1,117 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Crear layout para pagina web.
+        Debe contener Header
+        Side Nav
+        Aside Nav
+        Form completo
+        Footer
+    -->
+    <!-- <header>Header</header> -->
+
+    <nav class="main-nav">
+      <ul>
+        <li>Logo</li>
+        <li>Home</li>
+        <li>Products</li>
+        <li>Services</li>
+      </ul>
+      <form>
+        <input type="search" placeholder="Search" />
+        <button>Go</button>
+      </form>
+    </nav>
+    <div id="main">
+      <article>
+        <form class="myForm">
+          <h3 style="text-align: center">Servicio de peticion de transporte</h3>
+
+          <div class="row">
+            <div class="column">
+              <div class="input-group">
+                <label for="customer_name">Nombre </label>
+                <input id="customer_name" />
+              </div>
+              <div class="input-group">
+                <label for="phone_number">Telefono </label>
+                <input type="tel" id="phone_number" />
+              </div>
+              <div class="input-group">
+                <label for="email_address">Email </label>
+                <input type="email" id="email_address" />
+              </div>
+              <div class="input-group">
+                <label for="pickup_time">Fecha de recojo</label>
+                <input type="datetime-local" id="pickup_time" />
+              </div>
+              <div class="input-group">
+                <label for="pickup_place">Lugar de Recojo</label>
+                <select id="pickup_place">
+                  <option value="" selected="selected">Select One</option>
+                  <option value="office">Departamento</option>
+                  <option value="town_hall">Parque</option>
+                  <option value="telepathy">Calle !</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label for="dropoff_place">Lugar de entrega</label>
+                <input type="text" id="dropoff_place" list="destinations" />
+
+                <datalist id="destinations">
+                  <option value="Airport"></option>
+                  <option value="Beach"></option>
+                  <option value="Fred Flinstone's House"></option>
+                </datalist>
+              </div>
+            </div>
+            <div class="column">
+              <fieldset class="taxi">
+                <legend>Que taxi requieres</legend>
+                <label>
+                  <input type="radio" id="taxi_car" value="car" /> Auto
+                </label>
+                <label>
+                  <input type="radio" id="taxi_van" value="van" /> Van
+                </label>
+                <label>
+                  <input type="radio" id="taxi_tuk" value="tuktuk" /> Moto
+                </label>
+              </fieldset>
+
+              <fieldset class="extras">
+                <legend>Extras</legend>
+                <label>
+                  <input type="checkbox" id="extras_baby" value="baby" />
+                  Cinturones de seguridad
+                </label>
+                <label>
+                  <input type="checkbox" id="extras_wheel" value="wheelchair" />
+                  Aire Acondicionado
+                </label>
+                <label>
+                  <input type="checkbox" id="extras_tip" value="tip" /> Buena
+                  musica
+                </label>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="row">
+            <button id="submit">Submit Booking</button>
+          </div>
+        </form>
+      </article>
+
+      <nav>Side Nav</nav>
+      <aside>Aside</aside>
+    </div>
+    <footer>Copyright 2021</footer>
+  </body>
+</html>

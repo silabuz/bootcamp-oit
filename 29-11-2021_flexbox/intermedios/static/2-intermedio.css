@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.column > div {
+  font-size: 4vh;
+  color: white;
+  background: #000;
+  margin: 0.1em;
+  padding: 0.3em 1em;
+  border-radius: 3px;
+  flex: 1;
+}
+.column > div:nth-child(odd) {
+  background: gray;
+}

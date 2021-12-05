@@ -1,0 +1,51 @@
+.component {
+  width: 30%;
+  margin: 5rem auto;
+  padding: 1rem;
+  background-color: #ffffff;
+  text-align: center;
+  border-style: ridge;
+}
+
+.credit-card h2 {
+  color: rgba(4, 99, 128, 1);
+}
+
+.component .credit-card .line input {
+  width: 20%;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  margin: 1rem 0;
+  padding: 4px;
+  font-size: 1rem;
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+
+.valid-button {
+  border: 0;
+  padding: 1rem 2rem;
+  background-color: rgba(4, 99, 128, 0.9);
+  color: #efecca;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.total {
+  top: 3em;
+  left: -8em;
+  background: #002f2f;
+  color: #a7a37e;
+  width: 100px;
+  padding-right: 2rem;
+}
+
+.total p {
+  font-size: 1.5rem;
+}

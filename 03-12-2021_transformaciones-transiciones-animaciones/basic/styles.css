@@ -1,0 +1,21 @@
+.container {
+  position: relative;
+}
+
+.caja {
+  width: 180px;
+  height: 180px;
+  color: #fff;
+  text-align: center;
+  line-height: 180px;
+  margin: 15px;
+  float: left;
+  font-size: 18px;
+  font-family: Arial;
+  background-color: #c0392b;
+  -webkit-transition: background-color 1s linear;
+  transition: background-color 1s linear;
+}
+.caja:hover {
+  background-color: #3f51b5;
+}

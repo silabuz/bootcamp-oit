@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <style>
+      /* unvisited link */
+      a{
+        color: red;
+      }
+
+      /* visited link */
+      a:nth-child(2n):visited {
+        color: green;
+      }
+
+      /* mouse over link */
+      a:nth-child(2n):hover {
+        color: hotpink;
+      }
+
+      /* selected link */
+      a:nth-child(2n):active {
+        color: blue;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Dando estilo a links</h2>
+
+    <p>
+      <div>
+      <a href="#" target="">Link 1</a>
+      <a href="#" target="">Link 2</a>
+      <a href="#" target="">Link 3</a>
+      <a href="#" target="">Link 4</a>
+      <a href="#" target="">Link</a>
+      </div>
+    </p>
+  </body>
+</html>

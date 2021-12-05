@@ -1,0 +1,125 @@
+/* LAYOUT CSS */
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+#main {
+  display: flex;
+  flex: 1;
+}
+#main > article {
+  flex: 1;
+}
+#main > nav,
+#main > aside {
+  flex: 0 0 20vw;
+  background: beige;
+}
+#main > nav {
+  order: -1;
+}
+header,
+footer {
+  background: orangered;
+  height: 20vh;
+}
+header,
+footer,
+article,
+nav,
+aside {
+  padding: 1em;
+  margin: 10px;
+}
+
+/* FORM CSS */
+.myForm {
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+  border-radius: 3px;
+  padding: 1em;
+}
+.row {
+  display: flex;
+  justify-content: center;
+}
+.row > button:hover {
+  background-color: darkgrey;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+.input-group {
+  display: flex;
+}
+.input-group > label {
+  margin-right: 1em;
+  padding: 0.5em 0;
+}
+.myForm input,
+.myForm select {
+  flex: 6;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+.myForm button {
+  padding: 1em;
+  background: gray;
+  color: white;
+  border: 0;
+}
+.myForm fieldset {
+  border: 0;
+}
+.taxi > label,
+.extras > label {
+  display: block;
+}
+
+/* NAVBAR CSS */
+.main-nav {
+  display: flex;
+  background: orangered;
+  color: white;
+  border-radius: 3px;
+  padding: 1em;
+  font-family: sans-serif;
+}
+.main-nav > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex: 3;
+}
+.main-nav li {
+  margin-right: 1em;
+}
+.main-nav > form {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+.main-nav input {
+  flex: 1;
+}
+.main-nav button {
+  background: white;
+  border: 0;
+  border-radius: 1em;
+  color: orangered;
+  padding: 0 1em;
+  margin-left: 0.3em;
+}
+.main-nav button:hover {
+  color: pink;
+  padding: 0 2em;
+}
