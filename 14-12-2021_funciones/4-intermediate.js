@@ -8,7 +8,10 @@ const getFibonacciSecuence = (limit) => {
     return arr
 }
 
-const sumFibonacci = (arr) => {
+const sumFibonacci = (getFibonacciSecuence, limit) => {
+
+    arr = getFibonacciSecuence(limit);
+
     let sum = 0;
     arr.forEach(element => {
         if (element % 2 !== 0) sum += element
@@ -18,8 +21,6 @@ const sumFibonacci = (arr) => {
 
 
 let limit = 10;
-let fibonacci = getFibonacciSecuence(limit)
-let result = sumFibonacci(fibonacci)
+let result = sumFibonacci(getFibonacciSecuence, limit)
 
-console.log(fibonacci)
 console.log(result)
