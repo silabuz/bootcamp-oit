@@ -10,7 +10,7 @@ const arrayDifference = (arr, arr2) => {
         for (let j = 0; j < arr2.length; j++) {
             if (arr2[j] === arr[i]) isPresent = true
         }
-        if (isPresent === false) newArr.push(arr[i])
+        if (!isPresent) newArr.push(arr[i])
     }
 
     for (let i = 0; i < arr2.length; i++) {
@@ -18,12 +18,12 @@ const arrayDifference = (arr, arr2) => {
         for (let j = 0; j < arr.length; j++) {
             if (arr2[i] === arr[j]) isPresent = true
         }
-        if (isPresent === false) newArr.push(arr2[i])
+        if (!isPresent) newArr.push(arr2[i])
     }
     return newArr;
 }
 
-let arr = [1, 2, 3, 5]
+let arr = [1, 2, 3, 5, 6]
 let arr2 = [1, 2, 3, 4, 5]
 
 console.log(arrayDifference(arr, arr2))

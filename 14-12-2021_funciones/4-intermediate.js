@@ -2,7 +2,7 @@
 
 const getFibonacciSecuence = (limit) => {
     let arr = [0, 1];
-    for (let index = 1; index <= limit; index++) {
+    for (let index = 1; index <= limit - 2; index++) {
         arr.push(arr[index] + arr[index - 1])
     }
     return arr
@@ -11,7 +11,7 @@ const getFibonacciSecuence = (limit) => {
 const sumFibonacci = (getFibonacciSecuence, limit) => {
 
     arr = getFibonacciSecuence(limit);
-
+    console.log(arr)
     let sum = 0;
     arr.forEach(element => {
         if (element % 2 !== 0) sum += element
