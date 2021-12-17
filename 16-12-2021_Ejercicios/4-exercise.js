@@ -22,5 +22,5 @@ const missingLetterFinder = (str) => {
     return missing;
 }
 
-let result = missingLetterFinder("abcdeg")
+let result = missingLetterFinder("lmnoqrstu")
 console.log(result)
