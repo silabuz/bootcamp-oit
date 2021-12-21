@@ -11,7 +11,6 @@
 //      [["color": "blanco"], ["habitaciones", 4], ["ubicacion", "Arequipa"]], //AUTO
 // ]
 
-
 const flattenObjects = (array) => {
     let arr = [];
     for (let index = 0; index < array.length; index++) {
@@ -20,13 +19,11 @@ const flattenObjects = (array) => {
     return arr;
 }
 
-
 let array = [
     { color: "rojo", marca: "Ford", aireAcondicionado: true, traccion: "trasera" }, // AUTO
     { nombre: "alex", edad: 25 }, // PERSONA
     { color: "blanco", habitaciones: 4, ubicacion: "Arequipa" }, // CASA
 ]
-
 
 let result = flattenObjects(array)
 console.log(result)

@@ -1,65 +1,51 @@
-// Dada una lista de objetos de personas con atributos de edad, nombre y nacionalidad
+// Dada una lista de objetos de personas con atributos de nombre y DNI
 /* Ejemplo: [
-   { name: "person-1", age: 12, nacionalidad: "Peruano" },
-   { name: "person-2", age: 13, nacionalidad: "Venezolano" },
-   { name: "person-3", age: 78, nacionalidad: "Chileno" },
-   { name: "person-4", age: 22, nacionalidad: "Mexicano" },
-   { name: "person-5", age: 12, nacionalidad: "Argentino" },
-   { name: "person-6", age: 64, nacionalidad: "Canadiense" },
-   { name: "person-7", age: 55, nacionalidad: "Aleman" },
-   { name: "person-8", age: 44, nacionalidad: "Uruguayo" },
-   { name: "person-9", age: 32, nacionalidad: "Colombiano" },
+   { name: "person-1", DNI: 10012345 },
+   { name: "person-2", DNI: 10045678 },
+   { name: "person-3", DNI: 10012345 },
+   { name: "person-4", DNI: 10012333 },
+   { name: "person-5", DNI: 10045678 },
+   { name: "person-6", DNI: 10032422 },
+   { name: "person-7", DNI: 10045678 },
+   { name: "person-8", DNI: 10045478 },
+   { name: "person-9", DNI: 10054788 },
 ] */
-// Se deben retornar las personas separadas en tres categorias, siendos estas:
-//  1- menores de edad (menores de 18 años)
-//  2- mayoes de edad (18 años o mayores)
-//  3- tercera edad  (mas de 59 años)
-// 
-/* Ejemplo: {
-    menoresEdad: [
-        { name: "person-1", age: 12, nacionalidad: "Peruano" },
-        { name: "person-2", age: 13, nacionalidad: "Venezolano" },
-        { name: "person-5", age: 12, nacionalidad: "Argentino" },
-    ],
-    mayoresEdad: [
-       { name: "person-4", age: 22, nacionalidad: "Mexicano" },
-       { name: "person-5", age: 12, nacionalidad: "Argentino" },
-       { name: "person-7", age: 55, nacionalidad: "Aleman" },
-       { name: "person-8", age: 44, nacionalidad: "Uruguayo" },
-       { name: "person-9", age: 32, nacionalidad: "Colombiano" },
-    ],
-    terceraEdad: [
-        { name: "person-3", age: 78, nacionalidad: "Chileno" },
-        { name: "person-6", age: 64, nacionalidad: "Canadiense" },
-    ],
+// Dado que los DNI son registros unicos, la repetida existencia de estos es un problema
+// Se deben retornar las personas con DNI's duplicados:
+/* Ejemplo: [
+    { name: "person-1", age: 12, DNI: 10012345 },
+    { name: "person-3", age: 78, DNI: 10012345 },
+]
 */
 
+const getDuplicatedDnis = (array) => {
+    let arr = []
 
-const sortByAges = (array) => {
-    let youngers = [];
-    let adults = [];
-    let elders = [];
-
-    for (let index = 0; index < array.length; index++) {
-        if (array[index].age >= 18 && array[index].age < 60) adults.push(array[index])
-        else if (array[index].age >= 60) elders.push(array[index])
-        else youngers.push(array[index])
+    for (let i = 0; i < array.length; i++) {
+        let counter = 0;
+        for (let j = 0; j < array.length; j++) {
+            if (array[i].DNI === array[j].DNI) counter++
+        }
+        if (counter > 1) arr.push(array[i])
     }
-
-    return { youngers: youngers, adults: adults, elders: elders }
+    return arr;
 }
 
 let array = [
-    { name: "person-1", age: 12, nacionalidad: "Peruano" },
-    { name: "person-2", age: 13, nacionalidad: "Venezolano" },
-    { name: "person-3", age: 78, nacionalidad: "Chileno" },
-    { name: "person-4", age: 22, nacionalidad: "Mexicano" },
-    { name: "person-5", age: 12, nacionalidad: "Argentino" },
-    { name: "person-6", age: 64, nacionalidad: "Canadiense" },
-    { name: "person-7", age: 55, nacionalidad: "Aleman" },
-    { name: "person-8", age: 44, nacionalidad: "Uruguayo" },
-    { name: "person-9", age: 32, nacionalidad: "Colombiano" },
+    { name: "person-1", DNI: 10012345 },
+    { name: "person-2", DNI: 10045345 },
+    { name: "person-3", DNI: 10011245 },
+    { name: "person-4", DNI: 10012345 },
+    { name: "person-5", DNI: 10065345 },
+    { name: "person-6", DNI: 10012125 },
+    { name: "person-7", DNI: 10012346 },
+    { name: "person-8", DNI: 10011145 },
+    { name: "person-9", DNI: 10012145 },
 ]
 
-let result = sortByAges(array)
+let result = getDuplicatedDnis(array)
 console.log(result)
+
+
+
+
