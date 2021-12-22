@@ -25,9 +25,8 @@ const positionChanger = (array, element, position) => {
 
     for (let j = 0; j < array.length; j++) {
         if (j === position) {
-            let temp = array[j]
             arr.push(...elementsToMove)
-            arr.push(temp)
+            arr.push(array[j])
         } else {
             arr.push(array[j])
         }
