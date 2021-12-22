@@ -44,14 +44,8 @@ const sortByCountry = (a, b) => {
     return 0;
 }
 
-const deleteSingleNamePeople = (array) => {
-    let index = 0;
-    while (index < array.length) {
-        let name = array[index].name.split(" ")
-        if (name.length < 2) array.splice(index, 1);
-        else index++;
-    }
-    return array
+function eraseSingleNamePeople(e) {
+    return e.name.split(" ").length > 1
 }
 
 const sortByCategory = (array) => {
@@ -66,11 +60,10 @@ const sortByCategory = (array) => {
         else youngers.push(array[index])
     }
 
-
     // Removing single name people
-    youngers = youngers.filter(e => e.name.split(" ").length > 1)
-    adults = adults.filter(e => e.name.split(" ").length > 1)
-    elders = elders.filter(e => e.name.split(" ").length > 1)
+    youngers = youngers.filter(eraseSingleNamePeople)
+    adults = adults.filter(eraseSingleNamePeople)
+    elders = elders.filter(eraseSingleNamePeople)
 
     // Sorting by country
     youngers.sort(sortByCountry)
