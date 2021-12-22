@@ -66,10 +66,11 @@ const sortByCategory = (array) => {
         else youngers.push(array[index])
     }
 
+
     // Removing single name people
-    youngers = deleteSingleNamePeople(youngers)
-    adults = deleteSingleNamePeople(adults)
-    elders = deleteSingleNamePeople(elders)
+    youngers = youngers.filter(e => e.name.split(" ").length > 1)
+    adults = adults.filter(e => e.name.split(" ").length > 1)
+    elders = elders.filter(e => e.name.split(" ").length > 1)
 
     // Sorting by country
     youngers.sort(sortByCountry)
