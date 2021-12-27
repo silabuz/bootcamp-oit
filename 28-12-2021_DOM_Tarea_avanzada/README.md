@@ -11,7 +11,7 @@
 
 ## Ejercicio 01
 
-Crear una caluladora haciendo uso de html, css y javascript. Debe se ser capas de relaizar las cuatro operaciones aritmetricas basicas (suma, resta, multiplicacion y division). El estilo es a criterio de cada persona, sin embargo una interfaz agradable es requerida.
+Crear una caluladora haciendo uso de html, css y javascript. Debe se ser capas de realizar las cuatro operaciones aritmetricas basicas (suma, resta, multiplicacion y division). El estilo es libre al gusto de cada persona, sin embargo una interfaz agradable es requerida.
 
 **Resultado esperado**
 
