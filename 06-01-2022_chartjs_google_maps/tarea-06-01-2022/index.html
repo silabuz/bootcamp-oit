@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="section">
+      <div class="title">
+        <h2>about</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+          aperiam!
+        </p>
+      </div>
+
+      <div class="about-center section-center">
+        <article class="about-img">
+          <img src="./hero-bcg.jpeg" alt="" />
+        </article>
+        <article class="about">
+          <!-- btn container -->
+          <div class="btn-container">
+            <button class="tab-btn active" data-id="history">history</button>
+            <button class="tab-btn" data-id="vision">vision</button>
+            <button class="tab-btn" data-id="goals">goals</button>
+          </div>
+          <div class="about-content">
+            <!-- single item -->
+            <div class="content active" id="history">
+              <h4>history</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
+                deleniti corporis repudiandae totam soluta aut cum placeat
+                expedita rem minus molestiae, cumque quod harum fugit quas ea
+                tempora voluptates veniam?
+              </p>
+            </div>
+            <!-- end of single item -->
+            <!-- single item -->
+            <div class="content" id="vision">
+              <h4>vision</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Exercitationem, corrupti. Sapiente soluta corrupti ab, magnam
+                autem totam voluptate eligendi porro provident labore
+                perferendis tenetur est eius beatae nulla earum fugiat!
+              </p>
+            </div>
+            <!-- end of single item -->
+            <!-- single item -->
+            <div class="content" id="goals">
+              <h4>goals</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas quia maxime eligendi, doloribus hic, facilis, quae
+                minima a odit suscipit facere laborum. Ullam labore doloribus
+                nesciunt quisquam eveniet autem fugiat!
+              </p>
+            </div>
+            <!-- end of single item -->
+          </div>
+        </article>
+      </div>
+    </section>
+    <br />
+    <h2>Tasa de exitos</h2>
+    <canvas id="myChart" style="width: 100%; max-width: 600px"></canvas>
+
+    <br />
+
+    <h2>Ubicacion</h2>
+    <br />
+    <div id="map"></div>
+    <br />
+
+    <!-- javascript -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIojJbcNZ9ewgWc7emQ1W3Ur4vDtvTEbA&callback=initMap&v=weekly"
+      async
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
