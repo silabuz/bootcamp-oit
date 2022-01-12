@@ -21,7 +21,6 @@ function createCard(element){
     card.className = 'card m-3';
     card.style.width = "18rem"
 
-
     let image = document.createElement('img');
     image.className = "card-img-top";
     image.src = element.image
@@ -33,11 +32,9 @@ function createCard(element){
     cardTitle.className = 'card-title';
     cardTitle.innerHTML = element.name
 
-
     let cardText = document.createElement('p');
     cardText.className = 'card-text';
     cardText.innerHTML = element.star
-
 
     cardBody.appendChild(cardTitle)
     cardBody.appendChild(cardText)
