@@ -50,7 +50,7 @@ const login = (username, password) => {
     const data = response.then(data => {
         if(data) {
             localStorage.setItem("token", `Token ${data.token}`);
-            window.location.replace("http://127.0.0.1:5500/proyecto_api_12-01-2022/index.html");
+            window.location.replace("http://127.0.0.1:5502/proyecto_API_12-01-2022_13-01-2022/proyecto_api_12-01-2022/index.html");
         }
     })
 }

@@ -1,8 +1,11 @@
 const createProduct = (name, description, categoryId, price, imageUrl) => {
+    let token = localStorage.getItem("token")
     let options = {
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "Authorization": token,
+
         },
         body: JSON.stringify({
             name: name,
