@@ -1,21 +1,17 @@
 ## 1 Exercise
 
-Hacer peticion a alguna API, almacenarla la informacion del status y la cantidad de elementos recibidos en la data ( solo la cantidad ) y posteriormente mostrarla en el documento HTML asi como algun error si este llegara a presentarse.
-
-URL (puede usarse esta URL u otra): https://handlers.education.launchcode.org/static/planets.json
+Crear una lista de to-do’s con react que contenga un contenido inicial y agregar elementos desde un input a la lista.
 
 ## 2 Exercise
 
-Hacer peticion a alguna API, almacenarla la data y posteriormente mostrar cada uno de los elementos recibidos en la respuesta en texto plano en una lista HTML.
+Hacer una petición a la siguiente URL:
 
-URL (puede usarse esta URL u otra): https://handlers.education.launchcode.org/static/planets.json
+https://handlers.education.launchcode.org/static/planets.json
 
-![](2022-01-11-07-34-11.png)
+Guardar toda la data de la petición en el estado cuando se cargue el componente y luego mostrar una lista de los planetas en el mismo componente.
 
 ## 3 Exercise
 
-Hacer peticion a alguna API, almacenarla la data y posteriormente mostrar cada uno de los elementos recibidos en la respuesta en una carta y presentarlos todos el el documento HTML.
+Crear tres componentes de los cuales dos serán navbar y footer para crear un layout y luego consumir la API de rick y morty para renderizar cartas de con la información de personajes desde un tercer componente. La data de los personajes debe ser pasada como propiedades (props) al componente de Personajes.
 
-URL (puede usarse esta URL u otra): https://handlers.education.launchcode.org/static/planets.json
-
-![](2022-01-11-07-27-03.png)
+URL: https://rickandmortyapi.com/documentation/#rest
