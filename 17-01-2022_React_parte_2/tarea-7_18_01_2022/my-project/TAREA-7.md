@@ -1,6 +1,6 @@
 ## 1 Exercise
 
-Haciendo uso de axios hacer las peticiones necesarias para alcanzar el objetivo de:
+Haciendo uso de axios o fetch hacer las peticiones necesarias para alcanzar el objetivo de:
 
 1. Registrarse en la plataforma como usuario usando el EndPoint
    https://silabuz-api-project.herokuapp.com/authentication/sign-up/
