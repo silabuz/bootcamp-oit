@@ -2,7 +2,7 @@
 
 Haciendo uso de axios hacer hace un update al siguiente end point cuando se haga click a un boton:
 
-URL: https://jsonplaceholder.typicode.com/posts/1
+URL: https://jsonplaceholder.typicode.com/posts
 
 ![](2022-01-17-22-05-46.png)
 
